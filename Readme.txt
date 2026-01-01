@@ -2,6 +2,10 @@ Font :
 
 https://fonts.google.com/specimen/Space+Grotesk
 
+Icon :
+
+https://fontawesome.com/icons
+
 Library :
 
 https://micku7zu.github.io/vanilla-tilt.js/

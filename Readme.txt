@@ -1,3 +1,15 @@
+Font :
+
+https://fonts.google.com/specimen/Space+Grotesk
+
+Library :
+
+https://micku7zu.github.io/vanilla-tilt.js/
+https://michalsnik.github.io/aos/
+
+form to google sheets :
+https://github.com/jamiewilson/form-to-google-sheets
+
 Logo Kartu Perdana :
 
 https://www.koleksilogo.com/2023/12/logo-telkomsel.html
@@ -37,8 +49,3 @@ https://kontenesia.com/jasa-tulis-artikel-bisnis-startup/logo-doku/
 All Other Images :
 
 https://chatgpt.com/images/
-
-Library :
-
-https://micku7zu.github.io/vanilla-tilt.js/
-https://michalsnik.github.io/aos/

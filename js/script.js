@@ -193,3 +193,27 @@ btnCloseClaim.addEventListener("click", () => {
 btnTutupClaim.addEventListener("click", () => {
   Claim.classList.add("opacity-0", "pointer-events-none");
 });
+
+// Navbar Hp
+
+const open = document.getElementById("iconOpen");
+const close = document.getElementById("iconClose");
+const menu = document.querySelector(".mobile-navbar");
+
+// Buka Menu
+open.onclick = () => {
+  menu.classList.remove("right-[-100%]", "opacity-0");
+  menu.classList.add("right-0", "opacity-100");
+
+  open.classList.add("hidden");
+  close.classList.remove("hidden");
+};
+
+// Tutup Menu
+close.onclick = () => {
+  menu.classList.remove("right-0", "opacity-100");
+  menu.classList.add("right-[-100%]", "opacity-0");
+
+  close.classList.add("hidden");
+  open.classList.remove("hidden");
+};

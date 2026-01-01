@@ -14,9 +14,17 @@
         <h1 class="font-bold text-xl">TR Cell</h1>
       </div>
       <div class="flex justify-evenly gap-6 text-lg">
-        <ul class="flex gap-4">
+        <ul class="flex text-xl md:hidden">
+          <li class="cursor-pointer" id="iconOpen"><i class="fa-solid fa-bars"></i></li>
+          <li id="iconClose" class="hidden cursor-pointer"><i class="fa-solid fa-xmark hidden"></i></li>
+        </ul>
+        <ul
+          class="mobile-navbar rounded-b-lg shadow-md fixed top-[50px] justify-between right-[-100%] w-1/2 h-[50%] bg-white flex flex-col gap-4 py-5 items-center transition-all duration-300 ease-in-out opacity-0 md:static md:right-0 md:h-auto md:w-auto md:flex-row md:bg-transparent md:opacity-100"
+        >
           <li><a class="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-black after:transition-[3s] hover:after:w-full" href="#layanan">Layanan</a></li>
           <li><a class="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-black after:transition-[3s] hover:after:w-full" href="#produk">Produk</a></li>
+          <li><a class="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-black after:transition-[3s] hover:after:w-full" href="#diskon">Diskon</a></li>
+          <li><a class="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-black after:transition-[3s] hover:after:w-full" href="#faq">FAQ</a></li>
           <li><a class="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-black after:transition-[3s] hover:after:w-full" href="#kontak">Kontak</a></li>
         </ul>
         <ul class="flex gap-2">
@@ -711,6 +719,46 @@
     </section>
     <!-- Akhir Diskon -->
 
+    <!-- Tanya Jawab FAQ -->
+    <section id="faq">
+      <div class="w-[90%] mx-auto mt-4">
+        <h1 class="font-bold text-4xl text-center mb-2" data-aos="fade-up">Tanya Jawab (FAQ)</h1>
+        <p class="text-2xl text-center mb-2" data-aos="fade-up">Pesan Online, Ambil Langsung Ke Toko</p>
+        <div class="flex flex-col bg-blue-50 rounded-sm overflow-hidden my-4 md:w-1/2" data-aos="fade-right">
+          <div class="flex p-4 w-full bg-orange-100 items-center gap-2">
+            <div class="text-white rounded-full bg-green-700 p-5 text-2xl w-[50px] h-[50px] flex justify-center items-center shadow-md">1</div>
+            <p class="font-bold">Apa Itu Layanan Ambil Di Toko ?</p>
+          </div>
+          <p class="p-4">Anda Bisa Memesan Barang atau Produk Secara Online Dan Bisa Mengambilnya Langsung, Sehingga Tidak Perlu Menunggu Di Tempat.</p>
+        </div>
+        <div class="md:flex md:justify-end md:w-full">
+          <div class="flex flex-col bg-blue-50 rounded-sm overflow-hidden my-4 md:w-1/2 right-0" data-aos="fade-left" data-aos-delay="400">
+            <div class="flex p-4 w-full bg-orange-100 items-center gap-2">
+              <div class="text-white rounded-full bg-green-700 p-5 text-2xl w-[50px] h-[50px] flex justify-center items-center shadow-md">2</div>
+              <p class="font-bold">Bagaimana Cara Memesan dan Mengambil Pesanan Di Toko ?</p>
+            </div>
+            <p class="p-4">Anda Bisa Memesan Barang Melalui Website Kami. Lakukan Pembayaran Online. Anda Akan Mendapatkan Notifikasi Jika Pesanan Siap Di Ambil.</p>
+          </div>
+        </div>
+        <div class="flex flex-col bg-blue-50 rounded-sm overflow-hidden my-4 md:w-1/2" data-aos="fade-right">
+          <div class="flex p-4 w-full bg-orange-100 items-center gap-2">
+            <div class="text-white rounded-full bg-green-700 p-5 text-2xl w-[50px] h-[50px] flex justify-center items-center shadow-md">3</div>
+            <p class="font-bold">Berapa Lama Waktu Pemrosesan Pesanan Saya ?</p>
+          </div>
+          <p class="p-4">Pemrosesan Pesanan Biasanya Cepat, Biasanya 30 menit - 2 Jam Tergantung Dari Antrian, Anda Akan Segera Di Beri Notifikasi Jika Pesanan Siap, Jadi Jangan Khawatir.</p>
+        </div>
+        <div class="md:flex md:justify-end md:w-full">
+          <div class="flex flex-col bg-blue-50 rounded-sm overflow-hidden my-4 md:w-1/2" data-aos="fade-left" data-aos-delay="400">
+            <div class="flex p-4 w-full bg-orange-100 items-center gap-2">
+              <div class="text-white rounded-full bg-green-700 p-5 text-2xl w-[50px] h-[50px] flex justify-center items-center shadow-md">4</div>
+              <p class="font-bold">Barang Apa Saja Yang Bisa Saya Pesan ?</p>
+            </div>
+            <p class="p-4">Anda Bisa Memesan Produk Seperti <b>Pulsa, Top Up Game, E-Wallet, Akseroris HP.</b> dan Keperluan Digital Lainnya. Sembako Serta Produk Yang Ada Di Website Ini.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Tanya Jawab FAQ -->
     <!-- Kontak -->
     <section id="kontak">
       <div class="w-[90%] mx-auto mt-4">

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html class="scroll-smooth scroll-pt-[60px]">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./css/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="text-blue-950">
+    <!-- Navbar -->
+    <nav class="h-[50px] bg-white flex items-center shadow-md justify-between px-[5%] z-[999] fixed w-full top-0">
+      <div>
+        <h1 class="font-bold text-xl">TR Cell</h1>
+      </div>
+      <div class="flex justify-evenly gap-6 text-lg">
+        <ul class="flex gap-4">
+          <li><a class="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-black after:transition-[3s] hover:after:w-full" href="#layanan">Layanan</a></li>
+          <li><a class="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-black after:transition-[3s] hover:after:w-full" href="#produk">Produk</a></li>
+          <li><a class="relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-black after:transition-[3s] hover:after:w-full" href="#kontak">Kontak</a></li>
+        </ul>
+        <ul class="flex gap-2">
+          <li>
+            <i class="btn-open-keranjang cursor-pointer relative after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-0 after:bg-black after:transition-[3s] hover:after:w-full fa-solid fa-cart-shopping"></i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <!-- Halaman Keranjang -->
+    <div
+      class="keranjang transition-all overflow-hidden absolute top-0 left-0 right-0 bottom-0 w-[90%] h-[90%] fixed bg-white m-auto rounded-lg z-999 shadow-md flex flex-col justify-between overflow-y-auto opacity-0 pointer-events-none translate-x-full"
+    >
+      <div class="flex justify-between bg-blue-50 items-center sticky top-0">
+        <h1 class="font-bold text-2xl p-2">Keranjang Belanja</h1>
+        <button class="btn-close-keranjang cursor-pointer"><i class="text-3xl p-2 fa-solid fa-xmark"></i></button>
+      </div>
+      <div class="grid gap-2 grid-cols-1 grid-rows-3">
+        <div class="flex shadow-md gap-2 bg-white m-2 p-2 items-center justify-between">
+          <div class="flex flex-col md:flex-row items-center gap-2">
+            <img class="h-[150px]" src="img/keranjang/beras.png" alt="satu" />
+            <div class="flex gap-2 flex-col">
+              <h1 class="font-bold">Beras Premium 5Kg</h1>
+              <p class="text-orange-800 font-bold">Rp 65.000</p>
+              <div class="flex rounded-lg overflow-hidden items-center shadow-md">
+                <button class="p-1 bg-blue-700 text-white w-[50px]">-</button>
+                <input type="text" value="1" class="p-1 w-[50px] text-center" />
+                <button class="p-1 bg-blue-700 text-white w-[50px]">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="h-full p-1 font-bold flex flex-col justify-between">
+            <p>Rp 65.000</p>
+            <p>Rp 65.000</p>
+          </div>
+        </div>
+        <div class="flex gap-2 shadow-md bg-white m-2 p-2 items-center justify-between">
+          <div class="flex flex-col md:flex-row items-center gap-2">
+            <img class="h-[150px]" src="img/keranjang/snack.png" alt="satu" />
+            <div class="flex gap-2 flex-col">
+              <h1 class="font-bold">Cemilan Snack</h1>
+              <p class="text-orange-800 font-bold">Rp 12.000</p>
+              <div class="flex rounded-lg overflow-hidden items-center shadow-md">
+                <button class="p-1 bg-blue-700 text-white w-[50px]">-</button>
+                <input type="text" value="2" class="p-1 w-[50px] text-center" />
+                <button class="p-1 bg-blue-700 text-white w-[50px]">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="h-full p-1 font-bold flex flex-col justify-between">
+            <p>Rp 12.000</p>
+            <p>Rp 24.000</p>
+          </div>
+        </div>
+        <div class="flex gap-2 bg-white shadow-md m-2 p-2 items-center justify-between">
+          <div class="flex flex-col md:flex-row items-center gap-2">
+            <img class="h-[150px]" src="img/keranjang/headset.png" alt="satu" />
+            <div class="flex gap-2 flex-col">
+              <h1 class="font-bold">Headset</h1>
+              <p class="text-orange-800 font-bold">Rp 15.000</p>
+              <div class="flex rounded-lg overflow-hidden items-center shadow-md">
+                <button class="p-1 bg-blue-700 text-white w-[50px]">-</button>
+                <input type="text" value="1" class="p-1 w-[50px] text-center" />
+                <button class="p-1 bg-blue-700 text-white w-[50px]">+</button>
+              </div>
+            </div>
+          </div>
+          <div class="h-full font-bold flex flex-col justify-between">
+            <p>Rp 15.000</p>
+            <p>Rp 15.000</p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex p-4 justify-between">
+          <p>Total (3 Barang)</p>
+          <p class="font-bold">Rp 104.000</p>
+        </div>
+        <div class="grid gap-2 grid-cols-2 grid-rows-1 p-2 sticky bottom-0">
+          <button class="cursor-pointer btn-lanjut-belanja bg-gradient-to-b from-blue-800 to-blue-900 hover:bg-gradient-to-b hover:from-blue-900 hover:to-blue-950 text-white font-bold rounded-lg p-1">Lanjut Belanja</button>
+          <button class="cursor-pointer bg-gradient-to-b from-orange-600 to-orange-500 hover:bg-gradient-to-b from-orange-700 hover:from-orange-800 text-white font-bold rounded-lg p-1">Lanjut Pembayaran</button>
+        </div>
+      </div>
+    </div>
+    <!-- Akhir Halaman Keranjang -->
+
+    <!-- Layanan -->
+    <section class="mt-[60px] pb-10" id="layanan">
+      <div class="flex mt-5">
+        <div class="w-[90%] mx-auto flex flex-col text-center md:flex-row md:text-start my-1 gap-8">
+          <div class="flex-2">
+            <h1 class="text-4xl font-bold" data-aos="fade-right">Semua Kebutuhan Ada di sini!</h1>
+            <p class="text-base mb-4" data-aos="fade-right">Pulsa, Top up, E-Wallet, Sembako & Kebutuhan Elektronik</p>
+            <div class="flex flex-col w-[60%] mx-auto md:flex-row md:w-auto gap-4">
+              <!-- Layanan Pulsa -->
+              <div class="flex-1 flex flex-col gap-2" data-aos="fade-down" data-aos-delay="200">
+                <div class="judul1 bg-red-500 h-[60px] items-center flex justify-center rounded-lg font-bold">
+                  <h2>Cepat & Aman</h2>
+                </div>
+                <div class="card1 bg-white flex flex-col justify-center items-center shadow-md overflow-hidden rounded-lg">
+                  <h3 class="text-lg">Pulsa & Data</h3>
+                  <img class="w-full" src="img/largeimg/pulsa.png" alt="" data-tilt />
+                  <button class="btn-open-p-pulsa bg-blue-900 w-full p-2 text-white hover:bg-blue-950 cursor-pointer transition-[.3s]">Lihat Produk</button>
+                </div>
+              </div>
+              <!-- Lihat Produk Pulsa -->
+              <div
+                class="produk-pulsa transition-all overflow-hidden absolute top-0 left-0 right-0 bottom-0 w-[90%] h-[90%] fixed bg-white m-auto rounded-lg z-999 shadow-md flex flex-col justify-between overflow-y-auto opacity-0 pointer-events-none translate-x-full"
+              >
+                <div class="flex justify-between bg-blue-50 items-center sticky top-0">
+                  <h1 class="font-bold text-2xl p-2">Kartu Perdana, Pulsa & Data</h1>
+                  <button class="btn-close-pulsa cursor-pointer"><i class="text-3xl p-2 fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="p-2 grid grid-rows-3 grid-cols-3 gap-2">
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/kartuperdana/telkomsel.png" alt="1" />
+                    <h1 class="font-bold">Telkomsel</h1>
+                    <p>Pulsa & Kuota</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/kartuperdana/xl.png" alt="1" />
+                    <h1 class="font-bold">Xl</h1>
+                    <p>Pulsa & Kuota</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2 rounded-sm" src="img/kartuperdana/indosat.png" alt="1" />
+                    <h1 class="font-bold">Indosat</h1>
+                    <p>Pulsa & Kuota</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2 bg-yellow-300 rounded-sm" src="img/kartuperdana/im3.png" alt="1" />
+                    <h1 class="font-bold">M3</h1>
+                    <p>Pulsa & Kuota</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/kartuperdana/tri.png" alt="1" />
+                    <h1 class="font-bold">Tri</h1>
+                    <p>Pulsa & Kuota</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/kartuperdana/byu.png" alt="1" />
+                    <h1 class="font-bold">By.U</h1>
+                    <p>Pulsa & Kuota</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/kartuperdana/axis.png" alt="1" />
+                    <h1 class="font-bold">Axis</h1>
+                    <p>Pulsa & Kuota</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/kartuperdana/liveon.png" alt="1" />
+                    <h1 class="font-bold">Live on</h1>
+                    <p>Pulsa & Kuota</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/kartuperdana/smart.png" alt="1" />
+                    <h1 class="font-bold">Smartfren</h1>
+                    <p>Pulsa & Kuota</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                </div>
+                <div class="bg-white grid gap-2 grid-cols-2 grid-rows-1 p-2 sticky bottom-0">
+                  <button class="tutup cursor-pointer btn-close-pulsa bg-gradient-to-b from-blue-800 to-blue-900 hover:bg-gradient-to-b hover:from-blue-900 hover:to-blue-950 text-white font-bold rounded-lg p-1">Tutup</button>
+                  <button class="cursor-pointer btn-lihat-p-keranjang bg-gradient-to-b from-yellow-500 to-yellow-600 hover:bg-gradient-to-b hover:from-yellow-600 hover:to-yellow-700 text-white font-bold rounded-lg p-1">
+                    Lihat Keranjang <span class="bg-yellow-700 px-1 rounded-sm">3</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Akhir Lihat Produk Pulsa -->
+              <!-- Akhir Layanan Pulsa -->
+              <!-- Layanan Game -->
+              <div class="flex-1 flex flex-col gap-2" data-aos="fade-down" data-aos-delay="400">
+                <div class="judul2 bg-green-500 h-[60px] items-center flex justify-center rounded-lg font-bold">
+                  <h2>Harga Terbaik</h2>
+                </div>
+                <div class="card2 bg-white flex flex-col justify-center items-center shadow-md overflow-hidden rounded-lg">
+                  <h3 class="text-lg">Top Up Game</h3>
+                  <img class="w-full" src="img/largeimg/game.png" alt="" data-tilt />
+                  <button class="btn-open-p-game bg-blue-900 w-full p-2 text-white hover:bg-blue-950 cursor-pointer transition-[.3s]">Lihat Produk</button>
+                </div>
+              </div>
+              <!-- Lihat Produk Game -->
+              <div
+                class="produk-game transition-all overflow-hidden absolute top-0 left-0 right-0 bottom-0 w-[90%] h-[90%] fixed bg-white m-auto rounded-lg z-999 shadow-md flex flex-col justify-between overflow-y-auto opacity-0 pointer-events-none translate-x-full"
+              >
+                <div class="flex justify-between bg-blue-50 items-center sticky top-0">
+                  <h1 class="font-bold text-2xl p-2">Top Up Game</h1>
+                  <button class="btn-close-game cursor-pointer"><i class="text-3xl p-2 fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="p-2 grid grid-rows-3 grid-cols-3 gap-2">
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logogame/ff.png" alt="1" />
+                    <h1 class="font-bold">Free Fire</h1>
+                    <p>Diamond</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2 bg-black rounded-sm" src="img/logogame/ml.png" alt="1" />
+                    <h1 class="font-bold">Mobile Legend</h1>
+                    <p>Diamond</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2 bg-black rounded-lg" src="img/logogame/roblox.png" alt="1" />
+                    <h1 class="font-bold">Roblox</h1>
+                    <p>Robux</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logogame/efootball.png" alt="1" />
+                    <h1 class="font-bold">Efootball</h1>
+                    <p>Coin</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logogame/fifa.png" alt="1" />
+                    <h1 class="font-bold">Fifa</h1>
+                    <p>Pulsa & Kuota</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logogame/pubg.png" alt="1" />
+                    <h1 class="font-bold">PUBG</h1>
+                    <p>Uc</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logogame/valorant.png" alt="1" />
+                    <h1 class="font-bold">Valorant</h1>
+                    <p>VP</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logogame/codm.png" alt="1" />
+                    <h1 class="font-bold">CODM</h1>
+                    <p>CP</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logogame/genshin.png" alt="1" />
+                    <h1 class="font-bold">Genshin Impact</h1>
+                    <p>U Cash</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                </div>
+                <div class="bg-white grid gap-2 grid-cols-2 grid-rows-1 p-2 sticky bottom-0">
+                  <button class="tutup-game cursor-pointer btn-close-pulsa bg-gradient-to-b from-blue-800 to-blue-900 hover:bg-gradient-to-b hover:from-blue-900 hover:to-blue-950 text-white font-bold rounded-lg p-1">Tutup</button>
+                  <button class="cursor-pointer btn-lihat-g-keranjang bg-gradient-to-b from-yellow-500 to-yellow-600 hover:bg-gradient-to-b hover:from-yellow-600 hover:to-yellow-700 text-white font-bold rounded-lg p-1">
+                    Lihat Keranjang <span class="bg-yellow-700 px-1 rounded-sm">3</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Akhir Lihat Produk Game -->
+              <!-- Akhir Layanan Game -->
+              <!-- Layanan E Wallet -->
+              <div class="flex-1 flex flex-col gap-2" data-aos="fade-down" data-aos-delay="600">
+                <div class="judul3 bg-yellow-300 h-[60px] items-center flex justify-center rounded-lg font-bold">
+                  <h2>Layanan Ramah</h2>
+                </div>
+                <div class="card3 bg-white flex flex-col justify-center items-center shadow-md overflow-hidden rounded-lg">
+                  <h3 class="text-lg">Top Up E-Wallet</h3>
+                  <img class="w-full" src="img/largeimg/ewallet.png" alt="" data-tilt />
+                  <button class="btn-open-p-e-wallet bg-blue-900 w-full p-2 text-white hover:bg-blue-950 cursor-pointer transition-[.3s]">Lihat Produk</button>
+                </div>
+              </div>
+              <!-- Lihat Produk E Wallet -->
+              <div
+                class="produk-e-wallet transition-all overflow-hidden absolute top-0 left-0 right-0 bottom-0 w-[90%] h-[90%] fixed bg-white m-auto rounded-lg z-999 shadow-md flex flex-col justify-between overflow-y-auto opacity-0 pointer-events-none translate-x-full"
+              >
+                <div class="flex justify-between bg-blue-50 items-center sticky top-0">
+                  <h1 class="font-bold text-2xl p-2">Top Up E-Wallet</h1>
+                  <button class="btn-close-e-wallet cursor-pointer"><i class="text-3xl p-2 fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="p-2 grid grid-rows-3 grid-cols-3 gap-2">
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logoewallet/gopay.png" alt="1" />
+                    <h1 class="font-bold">Gopay</h1>
+                    <p>Saldo</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logoewallet/dana.png" alt="1" />
+                    <h1 class="font-bold">Dana</h1>
+                    <p>Saldo</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logoewallet/ovo.png" alt="1" />
+                    <h1 class="font-bold">Ovo</h1>
+                    <p>Saldo</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logoewallet/shopee.png" alt="1" />
+                    <h1 class="font-bold">Shopeepay</h1>
+                    <p>Saldo</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logoewallet/linkaja.png" alt="1" />
+                    <h1 class="font-bold">LinkAja</h1>
+                    <p>Pulsa & Kuota</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logoewallet/sakuku.png" alt="1" />
+                    <h1 class="font-bold">Sakuku</h1>
+                    <p>Saldo</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logoewallet/paytren.png" alt="1" />
+                    <h1 class="font-bold">Paytren</h1>
+                    <p>Saldo</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logoewallet/jenius.png" alt="1" />
+                    <h1 class="font-bold">Jenius</h1>
+                    <p>Saldo</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                  <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                    <img class="w-full md:w-1/2" src="img/logoewallet/doku.png" alt="1" />
+                    <h1 class="font-bold">Doku</h1>
+                    <p>Saldo</p>
+                    <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+                  </div>
+                </div>
+                <div class="bg-white grid gap-2 grid-cols-2 grid-rows-1 p-2 sticky bottom-0">
+                  <button class="tutup-e-wallet cursor-pointer btn-close-pulsa bg-gradient-to-b from-blue-800 to-blue-900 hover:bg-gradient-to-b hover:from-blue-900 hover:to-blue-950 text-white font-bold rounded-lg p-1">Tutup</button>
+                  <button class="cursor-pointer btn-lihat-e-keranjang bg-gradient-to-b from-yellow-500 to-yellow-600 hover:bg-gradient-to-b hover:from-yellow-600 hover:to-yellow-700 text-white font-bold rounded-lg p-1">
+                    Lihat Keranjang <span class="bg-yellow-700 px-1 rounded-sm">3</span>
+                  </button>
+                </div>
+              </div>
+              <!-- Akhir Lihat Produk E Wallet -->
+              <!-- Akhir Layanan E Wallet -->
+            </div>
+          </div>
+          <div class="flex-1 flex justify-center md:justify-end" data-aos="fade-left">
+            <img class="w-[75%] mx-auto md:w-[95%]" src="img/largeimg/jumbotron.png" alt="" data-tilt />
+          </div>
+        </div>
+      </div>
+      <div class="w-[90%] bg-blue-950 mx-auto md:mt-10 bg-gradient-to-r from-blue-950 via-blue-900 to-blue-950 flex rounded-lg overflow-hidden p-2 md:p-0 mt-[-3px] md:mt-0" data-aos="fade-right">
+        <div class="md:flex-1">
+          <img class="w-full hidden md:block" src="img/largeimg/uang1.png" alt="" data-tilt />
+        </div>
+        <div class="flex-4 text-white flex items-center justify-center flex-col gap-2">
+          <h1 class="text-4xl text-center font-bold">Jasa Tarik Saldo Jadi Uang Tunai</h1>
+
+          <p class="text-lg text-center">Tarik saldo e-wallet & bank jadi uang Cash!</p>
+        </div>
+        <div class="md:flex-1">
+          <img class="w-full hidden md:block" src="img/largeimg/uang2.png" alt="" data-tilt />
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Layanan -->
+
+    <!-- Produk -->
+    <section id="produk">
+      <div class="w-[90%] mx-auto">
+        <h1 class="text-4xl font-bold mb-4 text-center md:text-start" data-aos="fade-right">Belanja Kebutuhan Rumah</h1>
+        <div class="flex flex-col w-[60%] mx-auto md:flex-row md:w-full gap-6">
+          <!-- Produk Sembako -->
+          <div class="flex-1 flex flex-col items-center gap-4 rounded-lg overflow-hidden shadow-md bg-white" data-aos="fade-down" data-aos-delay="200">
+            <img src="img/largeimg/pangan.png" alt="" data-tilt />
+            <h2 class="font-bold text-2xl">Sembako</h2>
+            <button class="btn-open-p-sembako bg-blue-900 w-1/2 p-2 text-white hover:bg-blue-950 rounded-lg mb-4 cursor-pointer transition-[.3s]">Lihat Produk ></button>
+          </div>
+          <!-- Lihat Produk Sembako -->
+          <div
+            class="produk-sembako transition-all overflow-hidden absolute top-0 left-0 right-0 bottom-0 w-[90%] h-[90%] fixed bg-white m-auto rounded-lg z-999 shadow-md flex flex-col justify-between overflow-y-auto opacity-0 pointer-events-none translate-x-full"
+          >
+            <div class="flex justify-between bg-blue-50 items-center sticky top-0">
+              <h1 class="font-bold text-2xl p-2">Sembako</h1>
+              <button class="btn-close-sembako cursor-pointer"><i class="text-3xl p-2 fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-2 grid grid-rows-3 grid-cols-3 gap-2">
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/sembako/beras.png" alt="1" />
+                <h1 class="font-bold">Beras Premium</h1>
+                <p>Rp 65.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/sembako/minyak.png" alt="1" />
+                <h1 class="font-bold">Minyak Goreng Bimoli 2L</h1>
+                <p>Rp 31.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/sembako/indomie.png" alt="1" />
+                <h1 class="font-bold">Mie Instan 5 Pcs</h1>
+                <p>Rp 15.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/sembako/telur.png" alt="1" />
+                <h1 class="font-bold">Telur Ayam 1 Lusin</h1>
+                <p>Rp 28.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/sembako/ultramilk.png" alt="1" />
+                <h1 class="font-bold">Ultra Milk 1L</h1>
+                <p>Rp 18.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/sembako/gulapasir.png" alt="1" />
+                <h1 class="font-bold">Gula Pasir 1 Kg</h1>
+                <p>Rp 16.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/sembako/sarden.png" alt="1" />
+                <h1 class="font-bold">Sarden Kaleng</h1>
+                <p>Rp 13.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/sembako/teh.png" alt="1" />
+                <h1 class="font-bold">Teh Celup</h1>
+                <p>Rp 17.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/sembako/terigu.png" alt="1" />
+                <h1 class="font-bold">Terigu Segitiga Biru</h1>
+                <p>Rp 13.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+            </div>
+            <div class="bg-white grid gap-2 grid-cols-2 grid-rows-1 p-2 sticky bottom-0">
+              <button class="tutup-sembako cursor-pointer btn-close-pulsa bg-gradient-to-b from-blue-800 to-blue-900 hover:bg-gradient-to-b hover:from-blue-900 hover:to-blue-950 text-white font-bold rounded-lg p-1">Tutup</button>
+              <button class="cursor-pointer btn-lihat-s-keranjang bg-gradient-to-b from-yellow-500 to-yellow-600 hover:bg-gradient-to-b hover:from-yellow-600 hover:to-yellow-700 text-white font-bold rounded-lg p-1">
+                Lihat Keranjang <span class="bg-yellow-700 px-1 rounded-sm">3</span>
+              </button>
+            </div>
+          </div>
+          <!-- Akhir Lihat Produk Sembako -->
+          <!-- Akhir Produk Sembako -->
+          <!-- Produk Snack Dan Minuman -->
+          <div class="flex-1 flex flex-col items-center gap-4 rounded-lg overflow-hidden shadow-md bg-white" data-aos="fade-down" data-aos-delay="400">
+            <img src="img/largeimg/jajanan.png" alt="" data-tilt />
+            <h2 class="font-bold text-2xl">Snack & Minuman</h2>
+            <button class="btn-open-p-snack bg-blue-900 w-1/2 p-2 text-white hover:bg-blue-950 rounded-lg mb-4 cursor-pointer transition-[.3s]">Lihat Produk ></button>
+          </div>
+          <!-- Lihat Produk Snack Dan Minuman -->
+          <div
+            class="produk-snack transition-all overflow-hidden absolute top-0 left-0 right-0 bottom-0 w-[90%] h-[90%] fixed bg-white m-auto rounded-lg z-999 shadow-md flex flex-col justify-between overflow-y-auto opacity-0 pointer-events-none translate-x-full"
+          >
+            <div class="flex justify-between bg-blue-50 items-center sticky top-0">
+              <h1 class="font-bold text-2xl p-2">Snack & Minuman</h1>
+              <button class="btn-close-snack cursor-pointer"><i class="text-3xl p-2 fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-2 grid grid-rows-3 grid-cols-3 gap-2">
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/snack/chitato.png" alt="1" />
+                <h1 class="font-bold">Chitato</h1>
+                <p>Rp 10.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/snack/pocky.png" alt="1" />
+                <h1 class="font-bold">Pocky</h1>
+                <p>Rp 8.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/snack/goodtime.png" alt="1" />
+                <h1 class="font-bold">Good Time Cookies</h1>
+                <p>Rp 5.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/snack/taro.png" alt="1" />
+                <h1 class="font-bold">Taro Net</h1>
+                <p>Rp 10.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/snack/nabati.png" alt="1" />
+                <h1 class="font-bold">Nabati</h1>
+                <p>Rp 7.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/snack/tehpucuk.png" alt="1" />
+                <h1 class="font-bold">Teh Pucuk Harum</h1>
+                <p>Rp 4.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/snack/cimory.png" alt="1" />
+                <h1 class="font-bold">Susu Cimory</h1>
+                <p>Rp 8.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/snack/fanta.png" alt="1" />
+                <h1 class="font-bold">Fanta</h1>
+                <p>Rp 8.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/snack/ichitan.png" alt="1" />
+                <h1 class="font-bold">Ichitan</h1>
+                <p>Rp 8.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+            </div>
+            <div class="bg-white grid gap-2 grid-cols-2 grid-rows-1 p-2 sticky bottom-0">
+              <button class="tutup-snack cursor-pointer btn-close-pulsa bg-gradient-to-b from-blue-800 to-blue-900 hover:bg-gradient-to-b hover:from-blue-900 hover:to-blue-950 text-white font-bold rounded-lg p-1">Tutup</button>
+              <button class="cursor-pointer btn-lihat-s1-keranjang bg-gradient-to-b from-yellow-500 to-yellow-600 hover:bg-gradient-to-b hover:from-yellow-600 hover:to-yellow-700 text-white font-bold rounded-lg p-1">
+                Lihat Keranjang <span class="bg-yellow-700 px-1 rounded-sm">3</span>
+              </button>
+            </div>
+          </div>
+          <!-- Akhir Produk Snack Dan Minuman -->
+          <!-- Produk Elektronik -->
+          <div class="flex-1 flex flex-col items-center gap-4 rounded-lg overflow-hidden shadow-md bg-white" data-aos="fade-down" data-aos-delay="600">
+            <img src="img/largeimg/elektronik.png" alt="" data-tilt />
+            <h2 class="font-bold text-2xl">Elektronik</h2>
+            <button class="btn-open-p-elektronik bg-blue-900 w-1/2 p-2 text-white hover:bg-blue-950 rounded-lg mb-4 cursor-pointer transition-[.3s]">Lihat Produk ></button>
+          </div>
+          <!-- Lihat Produk Elektronik -->
+          <div
+            class="produk-elektronik transition-all overflow-hidden absolute top-0 left-0 right-0 bottom-0 w-[90%] h-[90%] fixed bg-white m-auto rounded-lg z-999 shadow-md flex flex-col justify-between overflow-y-auto opacity-0 pointer-events-none translate-x-full"
+          >
+            <div class="flex justify-between bg-blue-50 items-center sticky top-0">
+              <h1 class="font-bold text-2xl p-2">Elektronik</h1>
+              <button class="btn-close-elektronik cursor-pointer"><i class="text-3xl p-2 fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="p-2 grid grid-rows-3 grid-cols-3 gap-2">
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/elektronik/headset.png" alt="1" />
+                <h1 class="font-bold">Headset</h1>
+                <p>Rp 15.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/elektronik/kabel.png" alt="1" />
+                <h1 class="font-bold">Kabel Data</h1>
+                <p>Rp 10.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/elektronik/batok.png" alt="1" />
+                <h1 class="font-bold">Kepala Charger</h1>
+                <p>Rp 20.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/elektronik/earphone.png" alt="1" />
+                <h1 class="font-bold">Earphone</h1>
+                <p>Rp 10.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/elektronik/tg.png" alt="1" />
+                <h1 class="font-bold">Tempered Glass</h1>
+                <p>Rp 17.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/elektronik/ghp.png" alt="1" />
+                <h1 class="font-bold">Gantungan Hp</h1>
+                <p>Rp 5.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/elektronik/pkabel.png" alt="1" />
+                <h1 class="font-bold">Pelindung Kabel</h1>
+                <p>Rp 3.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/elektronik/popsocker.png" alt="1" />
+                <h1 class="font-bold">Popsocket</h1>
+                <p>Rp 2.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+              <div class="p-2 gap-1 flex items-center rounded-lg flex-col shadow-md justify-between">
+                <img class="w-full md:w-1/2" src="img/elektronik/powerbank.png" alt="1" />
+                <h1 class="font-bold">Power Bank</h1>
+                <p>Rp 150.000</p>
+                <button class="cursor-pointer bg-gradient-to-b from-orange-500 to-orange-600 hover:bg-gradient-to-b hover:from-orange-600 hover:to-orange-700 p-1 w-full rounded-lg font-bold text-white">Beli</button>
+              </div>
+            </div>
+            <div class="bg-white grid gap-2 grid-cols-2 grid-rows-1 p-2 sticky bottom-0">
+              <button class="tutup-elektronik cursor-pointer btn-close-pulsa bg-gradient-to-b from-blue-800 to-blue-900 hover:bg-gradient-to-b hover:from-blue-900 hover:to-blue-950 text-white font-bold rounded-lg p-1">Tutup</button>
+              <button class="cursor-pointer btn-lihat-e1-keranjang bg-gradient-to-b from-yellow-500 to-yellow-600 hover:bg-gradient-to-b hover:from-yellow-600 hover:to-yellow-700 text-white font-bold rounded-lg p-1">
+                Lihat Keranjang <span class="bg-yellow-700 px-1 rounded-sm">3</span>
+              </button>
+            </div>
+          </div>
+          <!-- Akhir Lihat Produk Elektronik -->
+          <!-- Akhir Produk Elektronik -->
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Produk -->
+
+    <!-- Diskon -->
+    <section class="mt-5" id="diskon">
+      <div class="mx-auto w-[90%]">
+        <h1 class="text-4xl font-bold mb-4 text-center md:text-start" data-aos="fade-right">Promo & Diskon Menarik</h1>
+        <p class="mb-4 text-center md:text-start" data-aos="fade-right">Nikmati Diskon Menarik & Penawaran Special!</p>
+        <div class="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-4">
+          <div class="diskon1 flex bg-gradient-to-r from-orange-500 via-orange-300 to-orange-500 rounded-lg shadow-md p-2" data-aos="fade-right" data-aos-delay="200">
+            <div class="flex-1">
+              <img class="w-full" src="img/diskon/diskon1.png" alt="" data-tilt />
+            </div>
+            <!-- Claim -->
+            <div class="flex-1 flex flex-col justify-around items-center">
+              <h1 class="text-2xl md:text-3xl font-bold text-orange-900">Voucher Belanja</h1>
+              <h2 class="text-xl md:text-2xl text-orange-800 bg-gradient-to-r from-orange-300 via-stone-100 to-orange-300 p-1 md:p-5">Hemat Hingga 50K</h2>
+              <button class="btn-open-claim bg-orange-700 p-2 rounded-lg font-bold text-white hover:bg-orange-800 cursor-pointer transition-[.3s]"><a>Claim Sekarang</a> ></button>
+            </div>
+            <!-- Halaman Claim -->
+            <div
+              class="claim bg-radial from-white to-orange-300 produk-snack transition-all overflow-hidden absolute top-0 left-0 right-0 bottom-0 w-[90%] h-[90%] fixed bg-white m-auto rounded-lg z-999 shadow-md flex flex-col justify-between overflow-y-auto opacity-0 pointer-events-none translate-x-full"
+            >
+              <div class="flex justify-end items-center sticky top-0">
+                <button class="btn-close-claim cursor-pointer"><i class="text-3xl p-2 fa-solid fa-xmark text-end text-white"></i></button>
+              </div>
+              <div class="flex flex-col items-center justify-center">
+                <h1 class="text-5xl font-bold text-orange-700">Selamat</h1>
+                <p class="text-3xl font-bold">Kamu Berhasil Mendapatkan</p>
+                <img class="w-[80%] md:w-[50%]" src="img/diskon/diskonclaim.png" alt="" />
+                <div class="flex flex-col gap-2 bg-radial from-white to-orange-200 w-[80%] shadow-md rounded-sm p-2 mb-4">
+                  <p class="text-2xl font-bold text-center">Kode Voucher</p>
+                  <p class="text-orange-700 text-2xl md:text-4xl text-center bg-orange-200 rounded-sm border border-orange-700 md:w-[80%] md:mx-auto">ABCDEFGH123AJKDDVS</p>
+                  <p class="text-center">Voucher berlaku hingga <b>30 Januari 2025</b> dan bisa dipakai untuk belanja di toko mitra kami.</p>
+                </div>
+              </div>
+              <div class="bg-white flex justify-center p-2 sticky bottom-0">
+                <button class="tutup-claim cursor-pointer w-1/2 bg-gradient-to-b from-blue-800 to-blue-900 hover:bg-gradient-to-b hover:from-blue-900 hover:to-blue-950 text-white font-bold rounded-lg p-1">Tutup</button>
+              </div>
+              <!-- Akhir Halaman Claim -->
+            </div>
+            <!-- Akhir Claim -->
+          </div>
+          <div class="diskon2 flex bg-gradient-to-r from-blue-500 via-blue-300 to-blue-500 rounded-lg shadow-md" data-aos="fade-left" data-aos-delay="400">
+            <div class="flex-1 flex flex-col justify-around items-center">
+              <h1 class="text-2xl md:text-3xl font-bold">Diskon Top-up</h1>
+              <h2 class="text-6xl text-yellow-300 font-bold drop-shadow-lg">17%</h2>
+              <button class="bg-blue-700 hover:bg-blue-800 p-2 rounded-lg font-bold text-white transition-[.3s]"><a href="#layanan">Top-Up Sekarang ></a></button>
+            </div>
+            <div class="flex-1">
+              <img class="w-full" src="img/diskon/diskon2.png" alt="" data-tilt />
+            </div>
+          </div>
+          <div class="diskon3 flex bg-gradient-to-r from-green-700 via-green-500 to-green-700 rounded-lg shadow-md" data-aos="fade-right" data-aos-delay="200">
+            <div class="flex-1">
+              <img class="w-full pl-3" src="img/diskon/diskon3.png" alt="" data-tilt />
+            </div>
+            <div class="flex-1 flex flex-col justify-around items-center">
+              <h1 class="text-2xl md:text-3xl font-bold text-white">Diskon Besar</h1>
+              <h2 class="text-6xl text-yellow-300 font-bold drop-shadow-lg">90%</h2>
+              <button class="bg-gradient-to-b from-yellow-300 to-yellow-500 hover:bg-gradient-to-b hover:from-yellow-400 hover:to-yellow-600 p-2 rounded-lg font-bold text-green-800 transition-[.3s]">
+                <a href="#produk">Belanja Sekarang ></a>
+              </button>
+            </div>
+          </div>
+          <div class="diskon4 flex bg-gradient-to-r from-orange-700 via-orange-600 to-orange-700 rounded-lg shadow-md" data-aos="fade-left" data-aos-delay="400">
+            <div class="flex-1 flex flex-col justify-around items-center">
+              <h1 class="text-2xl md:text-3xl font-bold text-white">Cashback Seru!</h1>
+              <h2 class="text-6xl text-yellow-300 font-bold drop-shadow-lg">50%</h2>
+              <button class="bg-gradient-to-b from-yellow-200 to-yellow-400 hover:bg-gradient-to-b hover:from-yellow-300 hover:to-yellow-500 p-2 rounded-lg font-bold text-orange-800 transition-[.3s]">
+                <a href="#produk">Belanja Sekarang ></a>
+              </button>
+            </div>
+            <div class="flex-1">
+              <img class="w-full pr-3" src="img/diskon/diskon4.png" alt="" data-tilt />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Diskon -->
+
+    <!-- Kontak -->
+    <section id="kontak">
+      <div class="w-[90%] mx-auto mt-4">
+        <h1 class="text-4xl text-center font-bold" data-aos="fade-up">Kontak Kami</h1>
+        <p class="text-center text-2xl mt-4" data-aos="fade-up">
+          Hubungi Kami Jika Ada Pertanyaan, <br />
+          Kami Siap Membantu Anda
+        </p>
+        <div class="grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 gap-4 mt-4 w-[70%] mx-auto md:w-full">
+          <div class="no flex gap-4 justify-start items-center shadow-md bg-white p-5 rounded-lg" data-aos="fade-right" data-aos-delay="200">
+            <div class="w-[100px] h-[100px] flex justify-center bg-gradient-to-tr from-blue-700 to-blue-500 p-5 rounded-full">
+              <i class="fa-solid fa-phone text-white text-6xl"></i>
+            </div>
+            <div class="flex flex-col">
+              <h1 class="text-2xl font-bold">Hubungi Kami</h1>
+              <a class="hover:text-blue-500" href="">0812-3456-7890</a>
+            </div>
+          </div>
+          <div class="email flex gap-4 justify-start items-center shadow-md bg-white p-5 rounded-lg" data-aos="fade-left" data-aos-delay="400">
+            <div class="w-[100px] h-[100px] flex justify-center bg-gradient-to-tr from-orange-500 to-orange-300 p-5 rounded-full">
+              <i class="fa-solid fa-envelope text-white text-6xl"></i>
+            </div>
+            <div class="flex flex-col">
+              <h1 class="text-2xl font-bold">Email Kami</h1>
+              <a class="hover:text-blue-500" href="">trcell@gmail.com</a>
+            </div>
+          </div>
+          <div class="wa flex gap-4 justify-start items-center shadow-md bg-white p-5 rounded-lg" data-aos="fade-right" data-aos-delay="200">
+            <div class="w-[100px] h-[100px] flex justify-center bg-gradient-to-tr from-green-700 to-green-500 p-5 rounded-full">
+              <i class="fa-brands fa-whatsapp text-white text-6xl"></i>
+            </div>
+            <div class="flex flex-col">
+              <h1 class="text-2xl font-bold">Hubungi Kami</h1>
+              <a class="hover:text-blue-500" href="">0812-3456-7890</a>
+            </div>
+          </div>
+          <div class="lokasi flex gap-4 justify-start items-center shadow-md bg-white p-5 rounded-lg" data-aos="fade-left" data-aos-delay="400">
+            <div class="w-[100px] h-[100px] flex justify-center bg-gradient-to-tr from-blue-700 to-blue-500 p-5 rounded-full">
+              <i class="fa-solid fa-location-dot text-white text-6xl"></i>
+            </div>
+            <div class="flex flex-col">
+              <h1 class="text-2xl font-bold">Kunjungi Kami</h1>
+              <a class="hover:text-blue-500" href="">Jl. Papakserang Kec.Ciparay</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Kontak -->
+
+    <!-- Pesan -->
+    <section class="mb-4" id="pesan">
+      <div class="w-[90%] mx-auto mt-10 flex flex-col md:flex-row gap-4">
+        <div class="flex flex-col flex-1">
+          <h1 class="text-4xl mb-4 font-bold text-center md:text-start" data-aos="fade-right">Kirim Pesan</h1>
+          <p class="text-2xl text-center md:text-start" data-aos="fade-right">Hubungi Kami Jika Ada Pertanyaan,<b> Kami Siap Membantu Anda</b></p>
+          <img src="img/largeimg/tumbnail.png" alt="" data-tilt data-tilt-scale="1.1" data-aos="fade-right" data-aos-delay="400" />
+        </div>
+        <div class="flex-1 rounded-lg overflow-hidden bg-white h-auto flex flex-col shadow-md" data-aos="fade-left">
+          <h1 class="text-3xl bg-blue-900 text-white p-2 pl-5 font-bold flex-1 text-center md:text-start">Kirim Pesan</h1>
+          <div class="alert m-5 items-center p-2 border-1 rounded-sm alert flex justify-between hidden">
+            <p class="text-xl">Pesan Berhasil Dikirim, Terimakasih!</p>
+            <i class="close-alert cursor-pointer text-xl fa-solid fa-xmark hover:text-red-600"></i>
+          </div>
+          <form name="submit-to-google-sheet" class="flex flex-col m-5 gap-4" action="" data-aos="fade-right" data-aos-delay="400">
+            <input name="nama" class="border border-blue-900 p-2 rounded-sm" type="text" placeholder="Nama" />
+            <input name="email" class="border border-blue-900 p-2 rounded-sm" type="email" placeholder="Email" />
+            <textarea name="pesan" class="h-[200px] border border-blue-900 p-2 rounded-sm resize-none" name="" id="" placeholder="Pesan Anda"></textarea>
+            <button
+              type="submit"
+              class="btn-kirim p-2 bg-gradient-to-r from-orange-600 via-orange-400 to-orange-600 hover:bg-gradient-to-r hover:from-orange-700 hover:via-orange-500 hover:to-orange-700 w-1/2 mx-auto rounded-xl font-bold text-white cursor-pointer"
+              data-aos="fade-up"
+            >
+              Kirim Pesan >
+            </button>
+            <button class="loading flex items-center gap-2 justify-center p-2 bg-gradient-to-r from-green-700 via-green-500 to-green-700 hover:bg-gradient-to-r w-1/2 mx-auto rounded-xl font-bold text-white hidden">
+              Loading <span class="after:content-[''] after:block after:w-[20px] after:h-[20px] after:border-2 after:border-white/40 after:border-t-white after:rounded-full after:animate-spin"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="w-[90%] mx-auto mt-4">
+        <h1 class="font-bold text-3xl text-center md:text-start">Kenapa Pilih Kami?</h1>
+        <div class="flex mt-4 justify-between flex-col text-center md:flex-row md:text-start">
+          <div class="flex flex-col bg-white shadow-md p-5 rounded-sm" data-tilt data-aos="fade-right">
+            <h1 class="font-bold text-2xl">Transaksi Cepat</h1>
+            <p class="text-xl">Proses Cepat & Aman</p>
+          </div>
+          <div class="flex flex-col bg-white shadow-md p-5 rounded-sm" data-tilt data-aos="fade-right">
+            <h1 class="font-bold text-2xl">Harga Bersaing</h1>
+            <p class="text-xl">Harga Paling Hemat</p>
+          </div>
+          <div class="flex flex-col bg-white shadow-md p-5 rounded-sm" data-tilt data-aos="fade-left">
+            <h1 class="font-bold text-2xl">Layanan Ramah</h1>
+            <p class="text-xl">Tidak Perlu Segan</p>
+          </div>
+          <div class="flex flex-col bg-white shadow-md p-5 rounded-sm" data-tilt data-aos="fade-left">
+            <h1 class="font-bold text-2xl">Agen Terpercaya</h1>
+            <p class="text-xl">Terpercaya & Profesional</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Kirim Pesan -->
+
+    <!-- Footer -->
+    <footer class="mt-10 bg-blue-50 h-[150px] flex items-center justify-center" data-aos="fade-in" data-aos-delay="500">
+      <i class="fa-regular fa-copyright mr-1 mt-[.7px] text-md text-center"></i>
+      <p class="text-center">2025 <b>Rafii MN.</b> All Right Reserved.</p>
+    </footer>
+    <!-- Akhir Footer -->
+    <script src="js/script.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/vanilla-tilt.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -39,157 +39,157 @@ const Claim = document.querySelector(".claim");
 
 // buka keranjang
 btnOpen.addEventListener("click", () => {
-  keranjang.classList.remove("opacity-0", "pointer-events-none");
-  ProdukPulsa.classList.add("opacity-0", "pointer-events-none");
+  keranjang.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
+  ProdukPulsa.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // tutup keranjang
 btnClose.addEventListener("click", () => {
-  keranjang.classList.add("opacity-0", "pointer-events-none");
+  keranjang.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // tutup keranjang (Lanjut Belanja)
 btnLanjut.addEventListener("click", () => {
-  keranjang.classList.add("opacity-0", "pointer-events-none");
+  keranjang.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Open Produk Pulsa
 btnOpenPulsa.addEventListener("click", () => {
-  ProdukPulsa.classList.remove("opacity-0", "pointer-events-none");
+  ProdukPulsa.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Close Produk Pulsa
 btnClosePulsa.addEventListener("click", () => {
-  ProdukPulsa.classList.add("opacity-0", "pointer-events-none");
+  ProdukPulsa.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // lihat Keranjang Pulsa
 LihatKeranjang.addEventListener("click", () => {
-  keranjang.classList.remove("opacity-0", "pointer-events-none");
-  ProdukPulsa.classList.add("opacity-0", "pointer-events-none");
+  keranjang.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
+  ProdukPulsa.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Tutup Produk Pulsa
 btnTutup.addEventListener("click", () => {
-  ProdukPulsa.classList.add("opacity-0", "pointer-events-none");
+  ProdukPulsa.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Open Produk Game
 btnOpenGame.addEventListener("click", () => {
-  ProdukGame.classList.remove("opacity-0", "pointer-events-none");
+  ProdukGame.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Close Produk Game
 btnCloseGame.addEventListener("click", () => {
-  ProdukGame.classList.add("opacity-0", "pointer-events-none");
+  ProdukGame.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Tutup Produk Game
 btnTutupGame.addEventListener("click", () => {
-  ProdukGame.classList.add("opacity-0", "pointer-events-none");
+  ProdukGame.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Lihat Keranjang Game
 GameLihatKeranjang.addEventListener("click", () => {
-  keranjang.classList.remove("opacity-0", "pointer-events-none");
-  ProdukGame.classList.add("opacity-0", "pointer-events-none");
+  keranjang.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
+  ProdukGame.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Open Produk Wallet
 btnOpenWallet.addEventListener("click", () => {
-  ProdukWallet.classList.remove("opacity-0", "pointer-events-none");
+  ProdukWallet.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Close Produk Wallet
 btnCloseWallet.addEventListener("click", () => {
-  ProdukWallet.classList.add("opacity-0", "pointer-events-none");
+  ProdukWallet.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Tutup Produk Wallet
 btnTutupWallet.addEventListener("click", () => {
-  ProdukWallet.classList.add("opacity-0", "pointer-events-none");
+  ProdukWallet.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Lihat Keranjang Wallet
 WalletLihatKeranjang.addEventListener("click", () => {
-  keranjang.classList.remove("opacity-0", "pointer-events-none");
-  ProdukWallet.classList.add("opacity-0", "pointer-events-none");
+  keranjang.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
+  ProdukWallet.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Open Produk Sembako
 btnOpenSembako.addEventListener("click", () => {
-  ProdukSembako.classList.remove("opacity-0", "pointer-events-none");
+  ProdukSembako.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Close Produk Sembako
 btnCloseSembako.addEventListener("click", () => {
-  ProdukSembako.classList.add("opacity-0", "pointer-events-none");
+  ProdukSembako.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Tutup Produk Sembako
 btnTutupSembako.addEventListener("click", () => {
-  ProdukSembako.classList.add("opacity-0", "pointer-events-none");
+  ProdukSembako.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Lihat Keranjang Sembako
 SembakoLihatKeranjang.addEventListener("click", () => {
-  keranjang.classList.remove("opacity-0", "pointer-events-none");
-  ProdukSembako.classList.add("opacity-0", "pointer-events-none");
+  keranjang.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
+  ProdukSembako.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Open Produk Snack
 btnOpenSnack.addEventListener("click", () => {
-  ProdukSnack.classList.remove("opacity-0", "pointer-events-none");
+  ProdukSnack.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Close Produk Snack
 btnCloseSnack.addEventListener("click", () => {
-  ProdukSnack.classList.add("opacity-0", "pointer-events-none");
+  ProdukSnack.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Tutup Produk Snack
 btnTutupSnack.addEventListener("click", () => {
-  ProdukSnack.classList.add("opacity-0", "pointer-events-none");
+  ProdukSnack.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Lihat Keranjang Snack
 SnackLihatKeranjang.addEventListener("click", () => {
-  keranjang.classList.remove("opacity-0", "pointer-events-none");
-  ProdukSnack.classList.add("opacity-0", "pointer-events-none");
+  keranjang.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
+  ProdukSnack.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Open Produk Elektronik
 btnOpenElektronik.addEventListener("click", () => {
-  ProdukElektronik.classList.remove("opacity-0", "pointer-events-none");
+  ProdukElektronik.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Close Produk Elektronik
 btnCloseElektronik.addEventListener("click", () => {
-  ProdukElektronik.classList.add("opacity-0", "pointer-events-none");
+  ProdukElektronik.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Tutup Produk Elektronik
 btnTutupElektronik.addEventListener("click", () => {
-  ProdukElektronik.classList.add("opacity-0", "pointer-events-none");
+  ProdukElektronik.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Lihat Keranjang Elektronik
 ElektronikLihatKeranjang.addEventListener("click", () => {
-  keranjang.classList.remove("opacity-0", "pointer-events-none");
-  ProdukElektronik.classList.add("opacity-0", "pointer-events-none");
+  keranjang.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
+  ProdukElektronik.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Open Produk Claim
 btnOpenClaim.addEventListener("click", () => {
-  Claim.classList.remove("opacity-0", "pointer-events-none");
+  Claim.classList.remove("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Close Produk Claim
 btnCloseClaim.addEventListener("click", () => {
-  Claim.classList.add("opacity-0", "pointer-events-none");
+  Claim.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });
 
 // Tutup Produk Claim
 btnTutupClaim.addEventListener("click", () => {
-  Claim.classList.add("opacity-0", "pointer-events-none");
+  Claim.classList.add("opacity-0", "pointer-events-none", "translate-x-full");
 });

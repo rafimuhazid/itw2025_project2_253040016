@@ -38,4 +38,7 @@ All Other Images :
 
 https://chatgpt.com/images/
 
+Library :
 
+https://micku7zu.github.io/vanilla-tilt.js/
+https://michalsnik.github.io/aos/

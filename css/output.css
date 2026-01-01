@@ -232,6 +232,9 @@
   .sticky {
     position: sticky;
   }
+  .inset-0 {
+    inset: calc(var(--spacing) * 0);
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -313,6 +316,9 @@
   .h-\[90\%\] {
     height: 90%;
   }
+  .h-\[90vh\] {
+    height: 90vh;
+  }
   .h-\[100px\] {
     height: 100px;
   }
@@ -351,6 +357,12 @@
   }
   .w-\[90\%\] {
     width: 90%;
+  }
+  .w-\[90vh\] {
+    width: 90vh;
+  }
+  .w-\[100\%\] {
+    width: 100%;
   }
   .w-\[100px\] {
     width: 100px;
